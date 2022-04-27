@@ -77,6 +77,25 @@ class TestController extends Controller
         return view('sec2t1');
     }
     public function sectionTwoTask2(){
-        return view('sec2t2');
+        $organization = "ШПИЦ";
+        return view('sec2t2', compact('organization'));
+    }
+    public function sectionTwoTask3(){
+        $text = "Некоторые бесконечности больше других бесконечностей.";
+        $name ='Джон Грин "Виноваты звезды"';
+        return view('sec2t3', compact('text', 'name'));
+    }
+    public function sectionTwoTask4(){
+        $li = ['dog', 'cat', 'monke'];
+        return view('sec2t4', compact('li'));
+    }
+    public function sectionTwoTask5(){
+        $div=['dog', 'cat', 'monkey', 'cat', 'monkey', 'cat', 'monkey'];
+        return view('sec2t5', compact('div'));
+    }
+
+    public function sectionTwoTask6(){
+        $span=[1,2,2,4,6,4,3,6,84,3475466,65666,63,4346,34,6,34,424367673];
+        return view('sec2t6', compact('span'));
     }
 }
