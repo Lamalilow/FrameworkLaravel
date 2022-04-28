@@ -5,13 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
-        ul{
-            list-style:none;
-            padding: 0;
-            font-family: 'Nunito', sans-serif;
-            text-align: center;
-        }
+
         li{
             padding: 17px;
         }
@@ -34,9 +30,9 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
+    <ul class="list-group">
         @foreach($li as $item)
-            <li><a target="_blank" href="https://{{$item}}.com/">{{$item}}</a></li>
+            <li class="list-group-item"><a target="_blank" href="https://{{$item}}.com/">{{$item}}</a></li>
         @endforeach
     </ul>
 </body>
