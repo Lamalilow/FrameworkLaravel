@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,9 @@ use App\Http\Controllers\TestController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('news',[NewsController::class, 'mainview']);
+
+
 Route::get('my-route', [TestController::class, 'lessonOne']);
 Route::get('data', [TestController::class, 'lessonTow']);
 Route::get('template/{detach}', [TestController::class, 'lessonTemplateOne']);
