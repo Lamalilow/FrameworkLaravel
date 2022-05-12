@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\prac120522Controller;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,11 @@ use App\Http\Controllers\NewsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post("user", [prac120522Controller::class, 'inputing']);
+Route::view("page1input", 'prac120522.page1input');
+Route::view("page2output", 'prac120522.page2output');
+
+
 Route::get('news',[NewsController::class, 'mainview']);
 
 
