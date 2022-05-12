@@ -14,22 +14,23 @@
     <form action="user" method="post" >
         @csrf
         <label class="form-label" for="name">ФИО</label>
-        <input class="form-control" name="user" type="text" placeholder="Иванов Иван Иванович">
+        <input class="form-control" value="{{session('name')}}" name="name" type="text" placeholder="Иванов Иван Иванович">
         <label class="form-label" for="age">Возраст</label>
-        <input class="form-control" type="number" name="age" placeholder="18" id="age">
+        <input class="form-control" type="number" value="{{session('age')}}" name="age" placeholder="18" id="age">
         <label class="form-label" for="country">Страна</label>
         <select class="form-control" name="country" id="country">
+            <option value="{{session('country')}}">Значение</option>
             <option value="РОССИЯ">РОССИЯ</option>
             <option value="америка">америка</option>
             <option value="африка">африка</option>
             <option value="европа">европа</option>
         </select>
         <label class="form-label" for="address">Адрес</label>
-        <input class="form-control" type="text" name="address" placeholder="Энтузиастов 17">
+        <input class="form-control" value="{{session('address')}}" type="text" name="address" placeholder="Энтузиастов 17">
         <label class="form-label" for="hobby">Увлечения</label>
-        <input class="form-control" type="text" name="hobby" placeholder="читать гулять">
+        <input class="form-control" type="text" value="{{session('hobby')}}" name="hobby" placeholder="читать гулять">
         <label class="form-label" for="aboutme">О себе</label>
-        <textarea class="form-control" name="aboutme" id="aboutme" cols="30" rows="10" placeholder="я кира йошикаге мне 33 года живу в северной части морио"></textarea>
+        <textarea class="form-control" name="aboutme" id="aboutme" cols="30" rows="10" placeholder="я кира йошикаге мне 33 года живу в северной части морио">{{session('aboutme')}}</textarea>
         <input type="submit" placeholder="Отправить">
     </form>
 </div>

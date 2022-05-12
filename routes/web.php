@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Session;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post("user", [prac120522Controller::class, 'inputing']);
+Route::post("user", [prac120522Controller::class, 'inputting']);
+//Route::post('page1input', [prac120522Controller::class,'inputting']);
 Route::view("page1input", 'prac120522.page1input');
 Route::view("page2output", 'prac120522.page2output');
 
